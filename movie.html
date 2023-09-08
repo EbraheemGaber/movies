@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+body .swiper  { 
+  position:fixed;
+  bottom: -120px;
+  
+  width: 100%;
+  height: 300px;
+   overflow:visible  !important;
+ 
+}
+.swiper.swiper-slide{
+  position: fixed !important;
+  overflow: visible;
+  color: #000;
+  
+}
+.swiper-slide img {
+  border-radius: 40px;
+}
+.swiper .swiper-slide img:hover
+{transform: translateY(-140px);
+
+  
+  cursor: pointer;
+  ;transition: .34s ease;
+  
+}
+
+  </style>
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+</head>
+<body>
+  <div class="full">
+    <h1 style="position: absolute;top: 10%;color:lightcoral;z-index: 5;left: 28%;font-size: 80px;font-family: monospace;">popcorn website</h1>
+  <img src="popcorn-1085072_1280.jpg" style=" filter: brightness(0.55); width: 100%;height: 99vh;">
+</div>
+  <!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><img src="dunker.jpeg"></div>
+    <div class="swiper-slide"><img src="archer.jpeg"></div>
+    <div class="swiper-slide"><img src="blade.jpeg"></div>
+    <div class="swiper-slide"><img src="archer.jpeg"></div>
+    <div class="swiper-slide"><img src="black.jpeg"></div>
+    <div class="swiper-slide"><img src="blade.jpeg"></div>
+    <div class="swiper-slide"><img src="dunker.jpeg"></div>
+    <div class="swiper-slide"><img src="archer.jpeg"></div>
+    <div class="swiper-slide"><img src="blade.jpeg"></div>
+    <div class="swiper-slide"><img src="archer.jpeg"></div>
+    <div class="swiper-slide"><img src="black.jpeg"></div>
+    <div class="swiper-slide"><img src="dunker.jpeg"></div>
+    <div class="swiper-slide"><img src="archer.jpeg"></div>
+    <div class="swiper-slide"><img src="blade.jpeg"></div>
+    <div class="swiper-slide"><img src="archer.jpeg"></div>
+    <div class="swiper-slide"><img src="black.jpeg"></div>
+    <div class="swiper-slide"><img src="blade.jpeg"></div>
+    <div class="swiper-slide"><img src="dunker.jpeg"></div>
+    <div class="swiper-slide"><img src="archer.jpeg"></div>
+    <div class="swiper-slide"><img src="blade.jpeg"></div>
+    <div class="swiper-slide"><img src="archer.jpeg"></div>
+    <div class="swiper-slide"><img src="black.jpeg"></div>
+    <div class="swiper-slide"><img src="blade.jpeg"></div>
+    <div class="swiper-slide"><img src="blade.jpeg"></div>
+    ...
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+
+ 
+ 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+ 
+
+ const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  freeMode: {
+    enabled: true,
+    sticky: true,
+  },
+  preventClick:false,preventClicksPropagation:false,
+
+
+ 
+
+ 
+  loop: true,slidesPerView: "8",
+ 
+  
+
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination', clickable: true,
+  },
+ 
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
+
+  
+</script>
+<script>
+    let cover=document.querySelector(".full");
+  let image =document.querySelector(".swiper-wrapper ");
+  image.addEventListener("click",e=>{
+    console.log(image)
+  });
+</script>
+</body>
+</html>
